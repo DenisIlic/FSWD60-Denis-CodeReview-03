@@ -1,149 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-						<meta charset="utf-8">
-
-										<!-- External Link Css -->
-						<link rel="stylesheet" type="text/css" href="css/Index.css">
-
-										<!-- Javascript External -->
-						<script type="text/javascript" src="Js/index.js"></script>
-
-											<!-- Title -->
-									<title>Car Insurance</title>									
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Insurance CF</title>
+	<link rel="stylesheet" href="css/Index.css">
 </head>
 <body>
-										<!-- 2 Pictures with Background-color -->						
-		<div class="container1">
-			<div class="img1">
-				<img src="img/logo.png">
-			</div>
 
-			<div class="img2">
-				<img src="img/banner.png">
-			</div>
-		</div>
+	<header><!--------------------------- header -->	
+		<a href="index.html">
+			<img id="logo" src="img/logo.png" alt="Insurance logo">
+		</a>	
+		
+		<div>
+			<a href="https://www.codefactory.wien" target="_blank">
+				<img id="banner1" src="img/banner.png" alt="Code Factory" >
+			</a>
+		</div>	
+	</header>
 
-									<!-- Navigation Bar -->
-		<ul class="lol3">
-    		<li class="lol"><a class="active" href="C:/Users/Sealda/Desktop/CodeReview03-Denis/Index.html">Home</a></li>
-    		<li class="lol2"><a href="Team">Team</a></li>
+	<nav>
+		<ul>
+			<li><a href="index.html" title="">Home</a></li>
+			<li><a href="team.html" title="">Team</a></li>
 		</ul>
+	</nav>
 
+	
+	<div id="main_container">
 
-									<!-- Javascript -->
-
-
-		<div class="opac">
+		
+		<div id="wallpaper">
 			
-			<div class="text_block">
-					Great coverage begins<br> with a custom quote<br>
-					<br>
-					<br>
-
-				<div id="form">
-					<div id="form1">
-						<div>
-							Name:
-							<input id="name" type="text" value="" class="area"><br>
-						</div>
-
-						<div>
-							Age:
-							<input id="age" type="number" value="" class="area"><br>
-						</div>
-					</div>
-
-
-				<div id="form2">
-				<div>
-					Horsepower: <input id="power" type="text" class="area"><br>
+		
+				<div id="carinsurance">
+				    <p>Car insurance</p>
 				</div>
 
-				<div id="myDropdown" class="area">
-					<div>
-						Country:
-					</div>
-					<div>
-						<select id="dropcalc">
-							<option value="0">Austria</option>
-							<option value="1">Hungary</option>
-							<option value="2">Greece</option>
-						</select>
-					</div>
-				</div>
-			</div>
+				<div id="form_container">
+
+				    <p>Great coverage begins</p>
+				    <p>with a custom quote</p>
+
+				    <div id="form">
+
+				    	<form action="" name="form" id="myForm" accept-charset="utf-8">
+
+				    		<div class="form_row">
+
+				    			<div>
+								      <div class="labels">
+								        <label for="fname">Your Name:</label>
+								      </div>
+								      <div >
+								        <input type="text" id="fname" name="firstname" class="info">
+								      </div>
+							    </div> 
+								<div>
+										<div class="labels">
+								       		<label for="age">Age:</label>
+								      	</div>
+								     	<div>
+								        	<input type="text" id="age" name="age"  class="info">
+								      	</div>
+								</div> 
+						    </div>
+							
+
+							<div class="form_row">
+
+				    			<div>
+										<div class="labels">
+									        <label for="country">Country:</label>
+									    </div>
+									    <select id="country" class="info" name="country">
+								          	<option value="0">Austria</option>
+								          	<option value="1">Hungary</option>
+								          	<option value="2">Greece</option>
+							        	</select>
+							   	</div> 
+
+								<div>
+										<div class="labels">
+								        	<label for="car">Horsepower of your car:</label>
+								      	</div>
+								     	<div>
+								        	<input type="text" id="car" name="car"  class="info">
+								      	</div>
+								</div> 
+
+						    </div>
+
+						    
+						    <div id="send">
+						      		<input type="button" value="Calculate" id="send_js">
+						    </div>
+										    		
+				    	</form>
+				    </div>
+
+
+				    <div id="calculation">
+				    	<p id="result"></p><!-------------------java script -->
+				    </div>
+
+				</div> <!------------------------form container -->
+
+		</div>		<!------------------------wallpaper -->	  
+
+		<div id="gray_section">
+			<h2>Un-complicating car coverage</h2>
+			<p>Understanding your coverage options shouldn't be so hard.</p>
+			<p>We'll guide you through available coverage types,</p>
+			<p>starting with who and what is covered.</p>
 		</div>
-		<button onclick= "calculateInsurance()" id="calc" >Calculate</button>
-		<p id="result">
 
-		</p>
-	</div>
+		<div id="bottom_container">
+
+			<div>
+				<h3>What comes standard</h3>
+				<p>The coverage you need</p>
+				<ol>
+					<li>Bodily Injury Liability</li>
+					<li>Property Damage</li>
+					<li>Medical Payments</li>
+				</ol>
+				<p class="litletitle">Benefits</p>
+				<p>12-month rate guarantee│ 24/7 customer service │ Lifetime Repair Guarantee </p>
+			</div>
+
+			<div>
+				<h3>Add-on protection & coverage</h3>
+				<p>For more peace of mind</p>
+				<ol>
+					<li>Better car Replacement</li>
+					<li>Towing & Labor</li>
+					<li>Rental car Coverage</li>
+				</ol>
+				<p class="litletitle">Earned Benefits</p>
+				<p>Accident Forgiveness │ New car Replacement&trade; </p>
+			</div>
+			
+		</div>
+
+
+	 <!--------------------------- Main container closed  ------->
+
+
 </div>
+
 	
 
-							<!-- background Image -->
-		<div class="hero">
-            <p class="text">Car Insurance</p>
+	<footer id="footer">
+		<div>
+	
+			<ul>
+				<li><a href="index.html" title="">Home</a></li>
+				<li><a href="team.html" title="">Team</a></li>
+				
+			</ul>
+
+			<a href="index.html">
+				<img id="logo2" src="img/logo-inv.png" alt="Insurance logo">
+			</a>	
+
 		</div>
 
-        
-            <img class="input" src="img/traffic-332857_1920.jpg" class="heroimage">
-       
+		<span><p>Denis Ilic - CodeFactory 2019</p></span>
+	
+		</footer>
+	
+	
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	
 
-        <div class="par">
-        	<p class="parr">Un-complicating car overage</p>
-        	<p>Understanding your coverage options schouldn´t be so hard.</p>
-        	<p>We´ll guide you through available coverage types,</p>
-        	<p>starting with who and what is covered</p>
-        </div>
-
-        					<!-- Text -->
-
-		<div class="container2">
-            <div class="benefits ">
-
-                <h3>What comes Standard</h3>
-
-                <p>The Coverage you need</p>
-
-                <ul class="benefitlist">
-                    <li class="check">✔️ Bodily Injury Liability</li>
-                    <li class="check">✔️ Property Damage </li>
-                    <li class="check">✔️ Medical Payments </li>
-                </ul>
-
-                <h4>Benefits</h4>
-                <p class="benefitxt">12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee </p>
-            </div>
-           <div class="benefits">
-
-                <h3>Add-on protection & coverage</h3>
-                <p>For more peace of mind</p>
-
-                <ul class="benefitlist">
-                    <li class="check">✔️ Better Car Replacement</li>
-                    <li class="check">✔️ Towing & Labor </li>
-                    <li class="check">✔️ Rental Car Coverage </li>
-                </ul>
-
-                <h4>Earned Benefits</h4>
-                <p class="benefitxt">Accident Forgiveness | New Car Replacement™</p>
-            </div>
-        </div>
-       </div>
-<footer>		
-		<ul class="navbar">
-    		<li class="nav"><a class="active" href="C:/Users/Sealda/Desktop/CodeReview03-Denis/Index.html">Home</a></li>
-    		<li class="nav"><a href="Team">Team</a></li>
-		</ul>
-		
-	<div class="bckcolor">
-		<div class="imgbck">
-			<img src="img/logo-inv.png">
-			<p class="ftext">Denis Ilic-CodeFactory 2019</p>
-		</div>
-	</div>
-</footer>		
-</body>
+	</body>
 </html>

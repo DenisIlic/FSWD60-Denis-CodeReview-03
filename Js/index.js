@@ -1,22 +1,57 @@
-function drop(){
-    document.getElementById("myDropdown").classList.toggle("show");
+var action = document.getElementById('send_js');
+
+action.addEventListener("click",clicked,false);
+
+
+
+
+
+function clicked(){
+
+    var name = document.getElementById('fname').value;
+    var age = document.getElementById('age').value;
+    var country = document.getElementById('country').value;
+    var car = document.getElementById('car').value;
+    
+
+    if (name == "") {
+
+        alert("Write your Name.");
+
+    }else if(age == "" || isNaN(age)){
+
+        alert("Please write your age.");
+
+    }else if(car == "" || isNaN(car)){
+
+        alert("Please write your car Horsepower.")
+
+    }else{
+
+        calculateInsurance(name, age, country, car);
+
+    }
+
 }
 
-function calculateInsurance(){
-    var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
-    var power = document.getElementById("power").value;
 
-    var e = document.getElementById("dropcalc").value;
+function calculateInsurance(a, b, c, d){
 
-    if (e == 0){
-        var res = parseInt(power) * 100 / parseInt(age) + 50;
-        document.getElementById("result").innerHTML = name + ", your insurance costs " +res +"€";
-    }   else if  (e == 1) {
-        var res2 = parseInt(power) * 120 / parseInt(age) + 100;
-        document.getElementById("result").innerHTML = name + ", your insurance costs " +res2 +"€";
-    }   else if (e == 2) {
-        var res3 = Math.floor(parseInt(power) * 150 / (parseInt(age) + 3) + 50);
-        document.getElementById("result").innerHTML = name + ", your insurance costs " +res3 +"€";
+    if (c == 0) {
+
+        var insurance = Math.round(d * 100 / b + 50);
+
+    }else if(c == 1){
+
+        var insurance = Math.round(d * 120 / b + 100);
+    
+    }else{
+        
+        let bplus = Number(b) + 3;
+        var insurance = Math.round(d * 150 / bplus + 50);
+        
     }
+
+    document.getElementById('result').innerHTML = `${a}, your insurance costs ${insurance}€`
+    
 }

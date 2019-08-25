@@ -1,0 +1,23 @@
+var teamMembers = [
+
+	{
+
+	"name":"Franz Kroc", 
+	"email":"fran@index.com",
+	"image":"img/foto/t1.jpg"
+
+	},{
+
+	"name":"Eva Schulman",
+	"email":"eva@index.com",
+	"image":"img/foto/t2.jpg"
+
+	},{
+
+	"name":"Fritz Jwich",
+	"email":"fritz@index.com",
+	"image":"img/foto/t3.jpg"
+
+	}
+	
+	];
